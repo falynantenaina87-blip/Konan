@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './src/App';
 import { ConvexProvider, ConvexReactClient } from "convex/react";
 
-constconst convexUrl = "https://scintillating-leopard-684.convex.cloud";
+const convexUrl = "https://scintillating-leopard-684.convex.cloud";
 
  const convex = new ConvexReactClient(convexUrl);
 
