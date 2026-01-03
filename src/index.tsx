@@ -1,11 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App'; // Importe ton fichier App.tsx
-// Si tu as un fichier index.css, décommente la ligne suivante
-// import './index.css'; 
+import App from './src/App';
+import { ConvexProvider, ConvexReactClient } from "convex/react";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const convexUrl = "https://scintillating-leopard-684.convex.cloud";
+
+ const convex = new ConvexReactClient(convexUrl);
+
+const rootElement = document.getElementById('root');
+if (!rootElement) throw new Error('Failed to find the root element');
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
   <React.StrictMode>
-    <App />
+    <ConvexProvider client={convex}>
+      <App />
+    </ConvexProvider>
   </React.StrictMode>
 );
