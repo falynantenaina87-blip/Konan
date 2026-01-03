@@ -17,4 +17,4 @@ root.render(
       <App />
     </ConvexProvider>
   </React.StrictMode>
-))
+);
