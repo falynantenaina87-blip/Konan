@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { User } from '../types';
+import { User } from './types'; 
 import Auth from './components/Auth';
 import Chat from './components/Chat';
 import Announcements from './components/Announcements';
